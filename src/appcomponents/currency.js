@@ -24,7 +24,6 @@ function Currency() {
     }
 
     useEffect(() =>{
-        setTimeout(() => {
         fetch(Base_url + "EUR")
         .then(response => response.json())
         .then(data => {
@@ -40,7 +39,6 @@ function Currency() {
         .catch(()=>{
             setLoadingDataError(true)
         })
-        },500); 
     },[])
 
     const handleFromAmount = (e) =>{
